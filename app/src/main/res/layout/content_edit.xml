@@ -6,39 +6,33 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context=".EditActivity"
+    tools:showIn="@layout/activity_edit">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="1"
         android:text="@string/my_personal_notepad"
-        android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvLastUpdated"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        tools:text="Last updated: 12-12-2012" />
-
-    <TextView
-        android:id="@+id/tvNote"
+    <EditText
+        android:id="@+id/etNote"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:textColor="@color/colorPrimary"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLastUpdated"
-        tools:text="Here goes the note" />
-
+        app:layout_constraintTop_toBottomOf="@+id/etTitle"
+        tools:text="This is my note" />
 </androidx.constraintlayout.widget.ConstraintLayout>
