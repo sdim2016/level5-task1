@@ -8,10 +8,6 @@ import java.util.*
 @Entity(tableName = "noteTable")
 data class Note(
 
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
-    var id: Long? = null,
-
     @ColumnInfo(name = "title")
     var title: String,
 
@@ -19,5 +15,9 @@ data class Note(
     var lastUpdated: Date,
 
     @ColumnInfo(name = "text")
-    var text: String
+    var text: String,
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    var id: Long? = null
     )
